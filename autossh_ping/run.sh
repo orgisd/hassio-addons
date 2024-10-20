@@ -52,7 +52,7 @@ echo "[INFO] Ping to ${HOSTNAME} successful"
 
 # Test ssh connection
 echo "[INFO] Testing SSH connection"
-ssh -o StirctHostKeyChecking=no -p $SSH_PORT $HOSTNAME 2>/dev/null || true
+ssh -o StrictHostKeyChecking=no -p $SSH_PORT $HOSTNAME 2>/dev/null || true
 
 echo "[INFO] SSH Host Keys:"
 ssh-keyscan -p $SSH_PORT $HOSTNAME || true

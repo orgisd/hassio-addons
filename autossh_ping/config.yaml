@@ -1,5 +1,5 @@
 name: "AutoSSH Ping"
-version: "0.1.0"
+version: "0.1.2"
 slug: autossh_ping
 description: "Wait for a successful ping and automatically connect to a ssh server for forwarding ports"
 url: "https://github.com/orgisd/hassio-addons"
@@ -11,6 +11,7 @@ arch:
   - i386
 startup: application
 boot: auto
+init: false
 host_network: true
 options:
   hostname: ""
@@ -23,12 +24,12 @@ options:
   gatetime: 30
 schema:
   hostname: str
-  ssh_port: int(1, 65535)
+  ssh_port: int(1,65535)
   username: str
   remote_forwarding:
     - str
   local_forwarding:
     - str
   other_ssh_options: str
-  monitor_port: int(0, 65535)
-  gatetime: int(1, 3600)
+  monitor_port: int(0,65535)
+  gatetime: int(1,3600)
