@@ -1,0 +1,25 @@
+configuration:
+  hostname:
+    name: Hostname
+    description: The hostname or IP of the SSH server
+  ssh_port:
+    name: SSH Port
+    description: The port of the SSH server
+  username:
+    name: Username
+    description: The username to use for the SSH connection
+  remote_forwarding:
+    name: Remote Forwarding
+    description: The remote port forwarding to setup (e.g. 127.0.0.1:8123:127.0.0.1:8123)
+  local_forwarding:
+    name: Local Forwarding
+    description: The local port forwarding to setup (e.g. 127.0.0.1:8123:127.0.0.1:8123)
+  other_ssh_options:
+    name: Other SSH Options
+    description: Additional SSH options to use
+  monitor_port:
+    name: Monitor Port
+    description: The port to monitor for the SSH connection (0 to disable)
+  gatetime:
+    name: Gate Time
+    description: The time in seconds to consider the connection as successful
